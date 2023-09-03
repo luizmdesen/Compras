@@ -38,7 +38,7 @@ namespace Compras
             // 
             // btnConectar
             // 
-            this.btnConectar.Location = new System.Drawing.Point(362, 224);
+            this.btnConectar.Location = new System.Drawing.Point(68, 64);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(100, 23);
             this.btnConectar.TabIndex = 0;
@@ -48,14 +48,14 @@ namespace Compras
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(362, 166);
+            this.txtUsuario.Location = new System.Drawing.Point(68, 6);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 23);
             this.txtUsuario.TabIndex = 1;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(362, 195);
+            this.txtSenha.Location = new System.Drawing.Point(68, 35);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(100, 23);
@@ -65,7 +65,7 @@ namespace Compras
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(306, 169);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 3;
@@ -74,7 +74,7 @@ namespace Compras
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(314, 198);
+            this.label2.Location = new System.Drawing.Point(20, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 4;
@@ -84,14 +84,14 @@ namespace Compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(182, 99);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnConectar);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
