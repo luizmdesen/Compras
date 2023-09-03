@@ -13,32 +13,36 @@ namespace Compras
 {
     public partial class Form1 : Form
     {
-
+        /// <summary>
+        /// Class <c>Form1</c> Janela para login.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
-            var connection = new Connection();
         }
-
+        /// <summary>
+        /// Este método serve para login do usuário no SQL Server.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
 
             string usuario = txtUsuario.Text;
             string senha = txtSenha.Text;
 
-            Connection.ConnectionString = $"Data Source=DESKTOP-8MOJPID;Initial Catalog=concilig;User ID={usuario};Password={senha}";
-
-            var cnn = new Connection();
+            var connection = new Connection($"Data Source=DESKTOP-8MOJPID;Initial Catalog=concilig;User ID={usuario};Password={senha}");
+            
             try
             {
-                SqlConnection cursor = cnn.connect_to_database();
-                cursor.Open();
-                MessageBox.Show("Conexão Aberta!");
-                cursor.Close();
+                connection.TestLogin();
+                MessageBox.Show("Conexão Sucedida");
+                Form2 f2 = new Form2(connection);
+                f2.Closed += (s, args) => this.Close(); // Se o Form2 fechar, fechar também o Form1.
+                f2.Show();
+                this.Hide();
             }
             catch(Exception)
             {
-                MessageBox.Show("Usuario ou senha incorreta");
+                MessageBox.Show("Login ou Senha inválido");
             }
         }
     }
